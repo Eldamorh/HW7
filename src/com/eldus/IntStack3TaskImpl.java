@@ -21,9 +21,9 @@ public class IntStack3TaskImpl implements IntStack{
     public void push(int value) {
         if (size == array.length) {
             int[] newArray = new int[array.length];
-            System.arraycopy(array, 0, newArray, 1, size - 1);
+            System.arraycopy(array, 1, newArray, 0, size - 1);
             array = newArray;
-            array[0] = value;
+            array[array.length-1] = value;
         }else{
             array[size] = value;
             size++;
@@ -45,4 +45,5 @@ public class IntStack3TaskImpl implements IntStack{
     public int peek() {
         return array[size - 1];
     }
+
 }

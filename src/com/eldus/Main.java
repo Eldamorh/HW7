@@ -5,7 +5,22 @@ import java.util.Arrays;
 
 public class Main {
 
+    public static void arrayPrintRecursive(int[] arr, int index){
+        System.out.println(arr[index]);
+        if(index!=arr.length-1){
+            arrayPrintRecursive(arr,++index);
+        }
+    }
+    
+
     public static void main(String[] args) {
+
+
+        int[] arr = new int[10];
+        for(int i = 0; i<10;i++){
+            arr[i] = i;
+        }
+        arrayPrintRecursive(arr,0);
 //        IntStack stack = new IntStackImpl(10);
 //        stack.push(5);
 //        stack.push(2);
